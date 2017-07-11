@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/css/common.css" rel="stylesheet">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/static/bootstrap.min.js"></script>
+
+    <title>{% block title %}Home{% endblock %} - Crawler</title>
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    <a href="{{ url_for('explore') }}">explore</a>
+    | <a href="{{ url_for('get_current_crawling_status') }}">get_current_crawling_status</a>
+    | <a href="{{ url_for('get_crawled_data') }}">get_crawled_data</a>
+    | <a href="{{ url_for('crawl') }}">crawl</a>
+    <hr />
+    {% block body %}
+        {{ body }}
+    {% endblock %}
+</div>
+</body>
+</html>
