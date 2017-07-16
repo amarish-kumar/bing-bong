@@ -11,4 +11,5 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
-db_repository/
+db_repository/*
+app.db
