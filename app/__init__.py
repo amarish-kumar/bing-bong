@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 ctx = app.app_context()
-ctx.push()
 with ctx:
 	pass
 app.config.from_object('config')

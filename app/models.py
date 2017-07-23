@@ -5,7 +5,7 @@ from app import db
 # or "How to build a chatbot?" post on medium.com
 class Entity(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(1024), index=True, unique=True)
+    name = db.Column(db.String(1024), index=True)
     url = db.Column(db.String(1024), unique=True)
     image_url = db.Column(db.String(1024))
     # Text can be used for wildcard topic match
