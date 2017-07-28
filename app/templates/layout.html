@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <title>{% block title %}Home{% endblock %} - Crunchly</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <button class="btn btn-default"><a href="{{ url_for('explore') }}">Explore</a></button>
+      <button class="btn btn-default"><a href="{{ url_for('get_current_crawling_status') }}">Get Current Crawling Status</a></button>
+      <button class="btn btn-default"><a href="{{ url_for('get_crawled_data') }}">Get Crawled Data</a></button>
+      <button class="btn btn-default"><a href="{{ url_for('crawl') }}">Crawl</a></button>
+      <hr />
+      <div class="text-center" style="text-align:center;">
+        {% block body %}
+        {{ body }}
+        {% endblock %}
+      </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

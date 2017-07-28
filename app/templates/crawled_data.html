@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block title %}Crawled{% endblock %}
+{% block body %}
+    <h1>Crawled Data</h1>
+    {% for entity in entities %}
+    <p>{{ entity.name }} : {{ entity.url }}</p>
+    {% endfor %}
+{% endblock %}
