@@ -21,6 +21,7 @@ cd bing-bong
 ```bash
 python db_create.py
 pip install -r requirements.txt
+python -m nltk.downloader all
 ```
 
 ### Run the app
