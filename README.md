@@ -16,12 +16,12 @@ git clone https://github.com/royalharsh/bing-bong.git
 cd bing-bong
 ```
 
-### Create database and Install dependencies
+### Install dependencies and create database 
 
 ```bash
-python db_create.py
 pip install -r requirements.txt
 python -m nltk.downloader all
+python db_create.py
 ```
 
 ### Run the app
